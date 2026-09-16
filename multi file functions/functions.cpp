@@ -30,7 +30,6 @@ int main()
 {
 
   AgeChck(13);
-
   double a{10.1};
   double b{10.1};
 
@@ -44,7 +43,6 @@ int main()
     /* code */
     AgeChck(i);
   }
-
 
   std::cout << "================================" << std::endl;
   std::cout << "Program worked successfully!" << std::endl;
