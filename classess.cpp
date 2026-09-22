@@ -16,7 +16,8 @@ private:
 
 public:
   // constructor initilizer
-  Cylinder() : base_radius(0.0), height(0.0) {}
+  // Cylinder() : base_radius(0.0), height(0.0) {}
+  Cylinder() = default;
 
   // constructor function with paramerters. (but either way, it can't have return type)
   Cylinder(double base_radius_param, double height_param)
@@ -62,7 +63,7 @@ this is done to not confuse the compiler and dev who without it has to think of 
 int main()
 {
   // using constructor
-  Cylinder p1(12.5, 5.5);
+  Cylinder p1(13.9,2.9);
 
   std::cout << "Base radius: " << p1.get_base_radius() << std::endl;
   std::cout << "Height: " << p1.get_height() << std::endl;
