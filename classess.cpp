@@ -26,11 +26,11 @@ public:
     height = height_param;
   }
 
-/*
-this->base_radius -- it is representing the class property.. while base_radius is the parameter being passed into the functions.
+  /*
+  this->base_radius -- it is representing the class property.. while base_radius is the parameter being passed into the functions.
 
-this is done to not confuse the compiler and dev who without it has to think of variable names; which is awefully harder than ppl assume.
-*/
+  this is done to not confuse the compiler and dev who without it has to think of variable names; which is awefully harder than ppl assume.
+  */
 
   // setter functions/methods
   void set_base_radius(double base_radius)
@@ -63,12 +63,12 @@ this is done to not confuse the compiler and dev who without it has to think of 
 int main()
 {
   // using constructor
-  Cylinder p1(13.9,2.9);
+  Cylinder p1(13.9, 2.9);
 
   std::cout << "Base radius: " << p1.get_base_radius() << std::endl;
   std::cout << "Height: " << p1.get_height() << std::endl;
   std::cout << "Result: " << p1.volume() << std::endl;
-  
+
   std::cout << "================================" << std::endl;
   // using manually created methods to inject values
   p1.set_base_radius(9.5);
@@ -77,6 +77,22 @@ int main()
   std::cout << "Base radius: " << p1.get_base_radius() << std::endl;
   std::cout << "Height: " << p1.get_height() << std::endl;
   std::cout << "Result: " << p1.volume() << std::endl;
+
+  std::cout << "================================" << std::endl;
+
+  /*
+  Heap object with pointers.. this is different from above stack based. we use it with pointer, and way to attain values. like:
+  (*c2).volume()
+  c2->volume()
+
+  AND, you've to delete it afterwards.. or you can do this pointer one to stack based as well, but you still have to first de-refrence it from either of the methods..
+  */
+
+  Cylinder *c2 = new Cylinder(11, 20);
+  std::cout << "Base radius: " << c2->get_base_radius() << std::endl;
+  std::cout << "Height: " << c2->get_height() << std::endl;
+  std::cout << "Result: " << c2->volume() << std::endl;
+  delete c2;
 
   std::cout << "================================" << std::endl;
   std::cout << "Program worked successfully!" << std::endl;

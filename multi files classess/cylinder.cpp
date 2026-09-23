@@ -1,10 +1,10 @@
 #include "Cylinder.h"
 #include "constants.h"
 
-Cylinder::Cylinder(double base_radius_param, double height_param)
+Cylinder::Cylinder(double base_radius, double height)
 {
-  base_radius = base_radius_param;
-  height = height_param;
+  this->base_radius = base_radius;
+  this->height = height;
 }
 
 double Cylinder::volume()
