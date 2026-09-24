@@ -38,7 +38,7 @@ Dog::~Dog()
 void rand_fuction()
 {
   // Dog my_dog("Fluffy", "Shepherd", 2);
-  Dog* p_dog= new Dog("Luffy", "Shepherd", 5);
+  Dog *p_dog = new Dog("Luffy", "Shepherd", 5);
   delete p_dog;
 
   /*
@@ -49,6 +49,7 @@ void rand_fuction()
 int main()
 {
   rand_fuction();
+
   std::cout << "================================" << std::endl;
   std::cout << "Program worked successfully!" << std::endl;
   return 0;
